@@ -220,5 +220,5 @@ body.overflow_block {
     border-radius: 50px;
     object-fit: cover; /* Maintain aspect ratio and cover entire div */
     display: block; /* Removes any extra space below the image */
-    margin: auto; /* Centers the image horizontally */
+    margin: auto; 
  }
