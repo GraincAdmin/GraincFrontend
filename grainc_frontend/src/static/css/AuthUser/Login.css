@@ -1,0 +1,145 @@
+
+
+
+.login_cover_frame {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px;
+    box-sizing: border-box;
+    background: rgba(160, 168, 192, 0.1);
+}
+
+.login_error {
+    display: flex;
+    font-size: 12px;
+    color: #FF0000;
+    margin-top: 8px;
+}
+
+.sellreports_login_frame {
+    display: flex;
+    width: 100%;
+    max-width: 520px;
+    height: fit-content;
+    padding: 24px;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px 0 rgba(149, 157, 165, 0.2);
+}
+
+.login_title {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 23px;
+    color: #1A1A1B;
+}
+
+.login_input_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 8px;
+    flex-direction: column;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+
+.login_input_title_text {
+    font-size: 15px;
+    color: #1A1A1B;
+}
+
+.login_input {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    padding: 0px 0px 0px 16px;
+    box-sizing: border-box;
+    margin: 0px;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    transition: border 0.3s;
+}
+
+.login_input:focus {
+    border: solid 2px rgba(0, 102, 255, 0.4);
+}
+
+.login_agreement_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 24px;
+    box-sizing: border-box;
+    gap: 8px;
+    align-items: center;
+}
+
+.login_agreement {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.login_agreement_text {
+    font-size: 14px;
+    color: #0066FF;
+    text-decoration: none;
+    margin-top: 16px;
+}
+
+.login_button {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    background: #0066FF;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 32px;
+    padding: 0px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.user_signup_link {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    color: #616161;
+    text-decoration: none;
+    margin-top: 32px;
+}
+
+
+@media all and (max-width:767px){
+    .login_cover_frame {
+        padding: 0px;
+        padding-bottom: 40px;
+        background: #fff;
+    }
+    .sellreports_login_frame {
+        border-radius: 0px;
+        box-shadow: none;
+        max-width: none;
+        padding: 24px 16px 16px 16px;
+    }
+} 
+

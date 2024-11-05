@@ -1,0 +1,47 @@
+.skeleton_comment_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 24px 0px;
+    box-sizing: border-box;
+    gap: 12px;
+}
+
+.skeleton_comment_profile_image_frame {
+    display: flex;
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    max-height: 35px;
+    border-radius: 50px;
+    border: solid 1px #eee;
+    transition: width 0.3s, height 0.3s;
+}
+
+.skeleton_comment_content_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+
+.skeleton_comment_content {
+    display: flex;
+    width: 100%;
+    height: 15px;
+    border-radius: 4px;
+}
+
+.skeleton_comment_content.margin_option {
+    margin-top: 8px;
+}
+
+
+@media all and (max-width:768px) {
+    .skeleton_comment_profile_image_frame {
+        width: 25px;
+        min-width: 25px;
+        height: 25px;
+        min-height: 25px;
+    }
+}

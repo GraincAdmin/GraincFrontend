@@ -1,0 +1,212 @@
+/* ------------ Notification Main ------------ */
+
+.notification_main_cover_main_R {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background: rgba(160, 168, 192, 0.1);
+}
+
+.notification_main_cover {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    padding: 48px 0px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.notification_section_title_text {
+    font-size: 24px;
+    color: #1A1A1B;
+}
+
+.notification_cover_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 32px;
+    box-sizing: border-box;
+}
+
+.notification_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #fff;
+    text-decoration: none;
+    gap: 16px;
+}
+
+.notification_information_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+}
+
+.notification_content_frame {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size: 16px;
+    color: #1A1A1B;
+    box-sizing: border-box;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.75;
+}
+
+.notification_main_information_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.notification_user_profile_image {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    border: solid 1px #eee;
+}
+
+.notification_user_profile_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover; /* Maintain aspect ratio and cover entire div */
+    display: block; /* Removes any extra space below the image */
+    margin: auto; /* Centers the image horizontally */
+}
+
+.notification_username {
+    font-size: 14px;
+    color: #1A1A1B;
+}
+
+.notification_section_divider_text {
+    font-size: 14px;
+    color: #e1e1e1;
+}
+
+.notification_date {
+    font-size: 14px;
+    color: #616161;
+    letter-spacing: 0.2px;
+}
+
+.notification_user_information_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.notification_action_button {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.user_notification_none_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #1A1A1B;
+    gap: 8px;
+}
+
+/* notification_delete_popup */
+
+.notification_delete_popup {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    align-items: end;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.notification_delete_popup.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.notification_popup_button_frame {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.notification_popup_button {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #1A1A1B;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+@media all and (max-width:1199px) {
+    .notification_main_cover {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width:768px) {
+    .notification_main_cover {
+        padding: 32px 24px 32px 24px;
+    }
+
+    .notification_section_title_text {
+        font-size: 20px;
+    }
+}
+
+
+

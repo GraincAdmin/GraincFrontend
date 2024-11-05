@@ -1,0 +1,63 @@
+.searched_results_main_frame {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 48px !important;
+}
+
+
+.searched_keyword_section {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    color: #1A1A1B;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+
+.report_market_main_report_container_row {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    height: auto;
+    flex-direction: column;
+    padding-top: 32px;
+}
+
+.searched_results_main_content_frame_reports {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    box-sizing: border-box;
+    padding-top: 24px;
+}
+
+
+
+
+
+@media all and (max-width:1199px) {
+    .searched_keyword_section {
+        display: none;
+    }
+    .searched_results_main_frame {
+        margin-top: 0px !important;
+    }
+}
+
+@media all and (max-width:768px) {
+    .searched_results_main_content_frame_reports {
+        padding-top: 0px;
+    }
+}

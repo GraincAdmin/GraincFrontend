@@ -1,0 +1,47 @@
+.community_comment_login_request_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.community_comment_login_request_frame span {
+    font-size: 15px;
+    color: #616161;
+    margin-left: 16px;
+}
+
+.community_comment_profile_image_frame {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    border: solid 1px #eee;
+}
+
+.community_comment_profile_image_frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover; /* Maintain aspect ratio and cover entire div */
+    display: block; /* Removes any extra space below the image */
+    margin: auto; /* Centers the image horizontally */
+}
+
+
+@media all and (max-width:768px) {
+    .community_comment_login_request_frame.style_option {
+        border-radius: 0px;
+        border: 0px;
+        border-top: solid 1px #eee;
+        border-bottom: solid 1px #eee;
+        margin-top: 8px;
+    }
+}

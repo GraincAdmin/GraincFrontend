@@ -1,0 +1,41 @@
+.admin_inquiry_subject {
+    display: flex;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    color: #1A1A1B;
+}
+
+.admin_inquiry_content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    word-break: keep-all;
+    font-size: 14px;
+    color: #1A1A1B;
+}
+
+
+/* ------ admin_company_create_new_announcement_button_frame ------ */
+
+.admin_company_create_new_announcement_button_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: right;
+}
+
+.admin_company_new_announcement_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #0066FF;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+

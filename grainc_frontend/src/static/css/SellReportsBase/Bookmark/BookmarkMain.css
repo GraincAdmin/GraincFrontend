@@ -1,0 +1,82 @@
+
+.bookmark_main_content_frame {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 768px;
+    height: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+
+@media all and (max-width:768px) {
+    .bookmark_main_content_frame {
+        padding-top: 24px;
+    }
+    .bookmark_padding_option{
+        padding: 0px 16px;
+    }
+}
+
+/* bookmark main */
+
+
+.bookmark_folder_indicator_control_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.bookmark_folder_indicator_control_frame.border_option {
+    border-bottom: solid 1px #eee;
+    margin-bottom: 24px;
+}
+
+.bookmark_folder_indicator_search_result_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 19px;
+    color: #1A1A1B;
+}
+
+.bookmark_folder_control_button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background: transparent;
+    transition: background 0.5s;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bookmark_folder_control_button:hover {
+    background: rgba(0, 102, 255, 0.1);
+}
+
+.bookmark_view_frame {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+}

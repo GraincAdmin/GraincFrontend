@@ -1,0 +1,62 @@
+.social_login_option_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding-top: 32px;
+}
+
+.social_login_option_identification {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;  
+    font-size: 14px;
+    color: #cccccc;
+    white-space: nowrap;
+    margin-bottom: 16px;
+}
+
+.social_login_option_identification_frame {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+}
+
+.social_login_button {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    gap: 16px;
+    margin-top: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social_login_button span {
+    width: 82px;
+    white-space: nowrap;
+    line-height: normal;
+}
+
+.social_login_button_google {
+    border: solid 1px #eee;
+    color: #000;
+}
+
+.social_login_button_kakao {
+    background: #FEE500;
+    color: #000;
+}
+
+.social_login_button_naver {
+    background: #03C75A;
+    color: #fff;
+}

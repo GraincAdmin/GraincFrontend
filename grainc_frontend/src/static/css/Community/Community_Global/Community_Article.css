@@ -1,0 +1,206 @@
+.g_article_section {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.g_article_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 32px 32px 21px 32px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: solid 1px #eee;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.g_article_main_frame:hover {
+    background: #fafafa;
+}
+
+.g_article_author_action_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.g_article_author_information_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.g_article_author_profile_image_frame {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: solid 1px #eee;
+}
+
+.g_article_author_profile_image_frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+
+.g_article_author_article_detail_information_content_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.g_article_category {
+    font-size: 15px;
+    color: #0066ff;
+}
+
+.g_article_sub_category {
+    font-size: 15px;
+    color: #1A1A1B;
+}
+
+.g_article_author_username {
+    font-size: 15px;
+    color: #1A1A1B;
+}
+
+.g_article_create_date {
+    font-size: 15px;
+    color: #616161;
+}
+
+.g_article_subject_content_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 56px;
+}
+
+.g_article_subject_content_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+.g_article_subject {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size: 18px;
+    color: #1A1A1B;
+    box-sizing: border-box;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-height: 24px;
+}
+
+.g_article_content {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size: 15px;
+    color: #616161;
+    margin-top: 8px;
+    box-sizing: border-box;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 24px;
+}
+
+.g_article_image_frame {
+    display: flex;
+    width: 100%;
+    min-width: 80px;
+    max-width: 80px;
+    height: 100%;
+    min-height: 80px;
+    max-height: 80px;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure that image doesn’t overflow out of the frame */
+}
+
+.g_article_image_frame img {
+    width:100%;
+    height: auto;
+    object-fit:cover;
+}
+
+.g_article_action_button_container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    padding-left: 56px;
+    box-sizing: border-box;
+    margin-top: 16px;
+}
+
+.g_article_action_button_wrap_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 12px;
+}
+
+
+@media all and (max-width:768px) {
+    .g_article_section {
+        gap: 0px;
+    }
+    .g_article_main_frame {
+        padding: 24px 16px;
+        box-shadow: none;
+        border: 0px;
+        border-radius: 0px;
+        border-bottom: solid 1px #eee;
+    }
+    .g_article_main_frame:hover {
+        background: none;
+    }
+    .g_article_subject_content_main_frame {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    .g_article_action_button_container {
+        padding-left: 0px;
+    }
+    .g_article_subject_content_frame {
+        margin-right: 0px;
+    }
+    .g_article_image_frame {
+        max-width: none;
+        max-height: 160px;
+        min-height: 160px;
+        margin-top: 16px;
+    }
+}

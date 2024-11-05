@@ -1,0 +1,119 @@
+.mobile_navigation_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 64px;
+    position: fixed;
+    bottom: -76px;
+    background: #fff;
+    align-items: center;
+    padding: 4px 0px;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease;
+}
+
+.mobile_navigation_main_frame.close {
+    bottom: -100%;
+}
+
+.mobile_navigation_button_frame {
+    display: flex;
+    width: 20%;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-direction: column;
+    font-size: 12px;
+    color: #1A1A1B;
+    text-decoration: none;
+}
+
+.mobile_navigation_profile_image {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    border: solid 1px #eee;
+}
+
+.mobile_navigation_profile_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover; /* Maintain aspect ratio and cover entire div */
+    display: block; /* Removes any extra space below the image */
+    margin: auto; /* Centers the image horizontally */
+}
+
+/* fast action */
+
+.mobile_navigation_fast_action_button {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    border-radius: 50px;
+    background: #0066FF;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    position: relative;
+    
+}
+
+.mobile_navigation_fast_action_section {
+    display: flex;
+    width: 220px;
+    height: auto;
+    border-radius: 8px;
+    background: #fff;
+    flex-direction: column;
+    overflow: hidden;
+    border: solid 1px #eee;
+    padding: 4px 0px;
+    gap: 4px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    position: absolute;
+    bottom: 55px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.mobile_navigation_fast_action_section.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fast_action_button_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+
+.fact_action_button_description_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 14px;
+    color: #1A1A1B;
+}
+
+
+
+
+@media all and (max-width:768px) {
+    .mobile_navigation_main_frame {
+        bottom: 0;
+    }
+}
+

@@ -1,0 +1,48 @@
+.admin_page_main_cover {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background: #fff;
+}
+.admin_page_indicator {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 20px;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.admin_page_policy_type_button_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+
+.admin_policy_type_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: solid 1px #e1e1e1;
+    font-size: 16px;
+    color: #616161;
+    text-decoration: none;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.admin_policy_type_button.selected {
+    background: #0066FF;
+    border: 0px;
+    color: #fff;
+}
+

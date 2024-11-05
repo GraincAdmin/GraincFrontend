@@ -1,0 +1,99 @@
+
+.sellreports_policy_frame {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    flex-direction: column;
+    padding-top: 88px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.sellreports_policy_title_frame {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 34px;
+    color: #1A1A1B;
+}
+
+.sellreports_policy_select {
+    display: flex;
+    width: 168px;
+    height: 48px;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    color: #1A1A1B;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    margin: 0 auto;
+    margin-top: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.sellreports_policy_select:focus {
+    border: solid 2px #0066FF;
+}
+
+.sellreports_policy_sub_title_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #e1e1e1;
+    font-size: 24px;
+    color: #1A1A1B;
+    margin-top: 32px;
+}
+
+
+.sellreports_policy_content_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    font-size: 16px;
+    color: #1A1A1B;
+    margin-top: 32px;
+    word-break: keep-all;
+}
+
+.sellreports_policy_content_frame p {
+    margin: 0px;
+}
+
+
+@media all and (max-width:1199px) {
+    .sellreports_policy_title_frame {
+        display: none;
+    }
+    .sellreports_policy_frame {
+        max-width: 768px;
+
+    }
+    .sellreports_policy_select {
+        margin-top: 0px;
+    }
+    .sellreports_policy_title_frame {
+        font-size: 24px;
+    }
+    .sellreports_policy_sub_title_frame {
+        font-size: 20px;
+    }
+
+}
+
+@media all and (max-width:768px) {
+    .sellreports_policy_frame {
+        padding: 24px 24px 0px 24px;
+    }
+}

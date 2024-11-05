@@ -1,0 +1,68 @@
+
+.community_article_comment_reply_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-left: 36px;
+    box-sizing: border-box;
+}
+
+
+.community_article_comment_write_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 16px 16px 12px 16px;
+    box-sizing: border-box;
+    border: solid 1px #eee;
+    border-radius: 16px;
+    align-items: end;
+}
+
+
+.community_article_comment_write_input {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    overflow: hidden; /* Hide the scrollbar */
+    resize: none; /* Prevent manual resizing */
+    font-size: 15px;
+    outline: none;
+    border: 0px;
+}
+
+.community_article_comment_write_input::placeholder {
+    color: #616161;
+}
+
+.community_article_comment_modification_submit_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: rgba(0, 102, 255, 0.05);
+    color: #0066ff;
+    font-size: 14px;
+    line-height: normal;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+.community_article_comment_submit_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+@media all and (max-width:768px) {
+    .community_article_comment_reply_main_frame {
+        padding-left: 0px;
+    }
+}
+
+

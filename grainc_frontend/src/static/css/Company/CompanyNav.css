@@ -1,0 +1,78 @@
+
+/* Company Nav */
+.sellreports_company_nav_frame {
+    display: flex;
+    width: 100%;
+    height: 59px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: solid 1px #eee;
+    z-index: 1;
+}
+
+.sellreports_company_nav {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sellreports_company_nav_logo_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.sellreports_company_nav_link_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.sellreports_company_nav_page_navigator {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 12px 10px;
+    border-radius: 8px;
+    background: transparent;
+    transition: background 0.3s;
+    font-size: 15px;
+    color: #1A1A1B;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sellreports_company_nav_page_navigator:hover {
+    background: rgba(0, 102, 255, 0.05);
+    color: #0066FF;
+}
+
+
+@media all and (max-width:1199px) {
+    .sellreports_company_nav {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width:768px) {
+    .sellreports_company_nav {
+        padding: 0px 16px 0px 24px;
+        box-sizing: border-box;
+    }
+
+    .mobile_responded_text {
+        max-width: 400px;
+        word-break: keep-all;
+        display: flex;
+        width: 100%;
+        text-align: center;
+    }
+}

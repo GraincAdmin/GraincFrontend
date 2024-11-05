@@ -1,0 +1,204 @@
+.home_main_section {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 48px;
+    box-sizing: border-box;
+}
+
+
+.home_content_section {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+
+
+.home_main_content_frame {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    flex-direction: column;
+}
+
+.home_ad_content_frame {
+    display: flex;
+    width: 100%;
+    max-width: 340px;
+    height: 100%;
+    flex-direction: column;
+    margin-left: 60px;
+    position: sticky;
+    top: 120px;
+}
+
+.home_section_title_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    justify-content: start;
+    font-size: 20px;
+    color: #1A1A1B;
+}
+
+.home_sub_article_view_frame {
+    display: flex;
+    width: 100%;
+    align-items: start;
+    gap: 16px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.home_sub_article_view_frame::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* article sub view */
+
+.article_sub_view_main_frame {
+    display: flex;
+    min-width: 230px;
+    max-width: 230px;
+    height: 300px;
+    justify-content: space-between;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    text-decoration: none;
+    flex-direction: column;
+}
+
+.article_sub_view_detail_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: start;
+    margin-top: auto;
+}
+
+.article_sub_view_subject {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #fff;
+    box-sizing: border-box;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+}
+
+.article_sub_view_author_information_frame {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
+}
+
+.article_sub_view_author_profile_image {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+.article_sub_view_author_profile_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover; /* Maintain aspect ratio and cover entire div */
+    display: block; /* Removes any extra space below the image */
+    margin: auto; /* Centers the image horizontally */
+}
+
+.article_sub_view_author_username {
+    font-size: 15;
+    color: #fff;
+}
+
+/* home_popular_article_category_base_section */
+
+.home_popular_article_category_selection_button_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    gap: 12px;
+}
+
+
+.home_popular_content_category_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 16px;
+    border: solid 1px #eee;
+    color: #616161;
+    cursor: pointer;
+}
+
+.home_popular_content_category_button.selected {
+    background: #1A1A1B;
+    color: #fff;
+}
+
+
+@media all and (max-width:1199px) {
+    .home_ad_content_frame {
+        display: none;
+    }
+    .home_main_section {
+        justify-content: center;
+        padding-top: 16px; 
+    }
+    .home_main_content_frame {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width:768px) {
+    .home_sub_article_view_frame {
+        padding-left: 16px;
+        box-sizing: border-box;
+    }
+    .home_content_section {
+        padding: 0px 16px;
+        box-sizing: border-box;
+    }
+    .home_popular_article_category_selection_button_frame {
+        padding-left: 16px;
+        flex-direction: row;
+        overflow: scroll;
+        flex-wrap: nowrap;
+        scrollbar-width: none; /* 파이어폭스 */
+    }
+    .home_popular_article_category_selection_button_frame::-webkit-scrollbar {
+        display: none;
+    }
+
+    .home_section_title_frame {
+        padding: 0px 16px !important;
+    }
+}

@@ -1,0 +1,233 @@
+.g_report_product_frame {
+    display: flex;
+    width: calc((100% - 24px) / 3);
+    height: auto;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+    position: relative;
+}
+
+.g_report_product_frame.custom_style {
+    width: calc((100% - 24px) / 2) !important;
+}
+
+.g_report_product_frame.custom_style_detail {
+    width: 280px !important;
+    min-width: 280px !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    border: solid 1px #eee !important;
+}
+
+.g_report_product_frame:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+
+.g_report_product_category_bookmark_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.g_report_product_bookmark_icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    cursor: pointer;
+}
+
+.g_report_bookmark_icon {
+    width: 24px;
+    height: 24px;
+}
+
+.g_report_product_category_short_indicator_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 12px;
+    font-size: 14px;
+    color: #616161;
+    align-items: center;
+}
+
+
+.g_report_product_subject {
+    display: -webkit-box;
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #1A1A1B;
+    margin-top: 12px;
+    line-height: 25px;
+}
+
+
+.g_report_product_bottom_information_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.g_report_product_bottom_information_frame.custom_style_detail {
+    flex-direction: column !important;
+}
+
+.g_report_further_information_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.g_report_further_information_frame.custom_style_detail {
+    width: 100% !important;
+    margin-top: 8px !important;
+}
+
+.g_report_further_information_card_ui_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 2px 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #fafafa;
+    font-size: 12px;
+    color: #616161;
+    white-space: nowrap;
+}
+
+.g_report_product_additional_information_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.g_report_product_additional_information_frame.custom_style_detail {
+    flex-direction: column !important;
+    padding-left: 0px !important;
+    justify-content: flex-start !important;
+}
+
+.g_report_product_rating_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #616161;
+}
+
+.g_report_product_rating_icon {
+    width: 12px;
+    height: 12px;
+}
+
+.g_report_product_author_information {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #1A1A1B;
+    align-items: center;
+    line-height: normal;
+}
+
+.g_report_product_author_profile_image {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: solid 1px #eee;
+}
+
+.g_report_product_author_profile_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire div */
+    display: block; /* Removes any extra space below the image */
+    margin: auto; /* Centers the image horizontally */
+}
+
+.g_report_product_price {
+    font-size: 15px;
+    color: #1A1A1B;
+}
+
+
+@media all and (max-width:1199px) {
+    .g_report_product_frame:hover {
+        box-shadow: none;
+    }
+}
+
+@media all and (max-width:768px) {
+    .g_report_product_frame {
+        width: 100%;
+        border-radius: 0px;
+        border: 0px;
+        border-bottom: solid 1px #eee;
+    }
+    .g_report_product_frame.custom_style {
+        width: 100% !important;
+        border-bottom: solid 1px #eee;
+    }
+    .g_report_product_border_option_768 {
+        border-bottom: 0px;
+    }
+    .g_report_product_bottom_information_frame {
+        flex-direction: row-reverse;
+    }
+    .g_report_further_information_card_ui_frame {
+        font-size: 14px;
+    }
+    .g_report_product_rating_frame {
+        font-size: 14px;
+    }
+    .g_report_product_rating_icon {
+        height: 14px;
+        width: 14px;
+    }
+    .g_report_product_additional_information_frame {
+        padding-left: 8px;
+        box-sizing: border-box;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .g_report_further_information_frame {
+        width: auto;
+        margin-top: 0px;
+    }
+}

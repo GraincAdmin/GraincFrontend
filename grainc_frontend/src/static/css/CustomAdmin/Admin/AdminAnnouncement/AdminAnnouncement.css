@@ -1,0 +1,22 @@
+.admin_new_announcement_create_button_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    justify-content: right;
+}
+
+.admin_new_announcement_create_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: normal;
+    border-radius: 8px;
+    background: #0066FF;
+    color: #fff;
+    text-decoration: none;
+}
+

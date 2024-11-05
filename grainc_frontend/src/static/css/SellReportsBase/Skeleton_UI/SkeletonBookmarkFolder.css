@@ -1,0 +1,52 @@
+.skeleton_bookmark_folder_frame {
+    display: flex;
+    width: calc((100% - 50px) / 5);
+    height: auto;
+    flex-direction: column;
+}
+
+.skeleton_bookmark_folder_image_frame {
+    display: flex;
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+}
+
+.skeleton_bookmark_folder_content_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.skeleton_bookmark_folder_content {
+    display: flex;
+    border-radius: 4px;
+    width: 100px;
+    height: 15px;
+}
+
+@media all and (max-width:1199px) {
+    .skeleton_bookmark_folder_frame {
+        width: calc((100% - 50px) / 3);
+    }
+}
+
+@media all and (max-width:768px) {
+    .skeleton_bookmark_folder_frame {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+    .skeleton_bookmark_folder_image_frame {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+    }
+    .skeleton_bookmark_folder_content_frame {
+        margin-top: 0px;
+        margin-left: 16px;
+    }
+}

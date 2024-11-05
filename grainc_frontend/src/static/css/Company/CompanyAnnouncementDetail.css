@@ -1,0 +1,74 @@
+.company_announcement_header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    background: #0043A8;
+}
+
+.company_announcement_main_cover {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    flex-direction: column;
+    padding-top: 32px;
+    box-sizing: border-box;
+}
+
+.company_announcement_title_create_date_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: solid 1px #e1e1e1;
+}
+
+.company_announcement_subject_text {
+    font-size: 28px;
+    color: #1A1A1B;
+}
+
+
+.company_announcement_create_date_text {
+    font-size: 16px;
+    color: #616161;
+}
+
+.company_announcement_main_content_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    font-size: 16px;
+    color: #1A1A1B;
+    margin-top: 24px;
+    line-height: 28px;
+}
+
+.company_announcement_main_content_frame p {
+    margin: 0px;
+}
+.company_announcement_main_content_frame img {
+    display: flex;
+    width: 100%;
+}
+
+
+@media all and (max-width:1199px) {
+    .company_announcement_main_cover {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width:768px) {
+    .company_announcement_main_cover {
+        padding: 32px 16px 0px 16px;
+    }
+}

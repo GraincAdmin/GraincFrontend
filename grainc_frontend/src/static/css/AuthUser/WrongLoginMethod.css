@@ -1,0 +1,55 @@
+.wrong_login_method_main_frame {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.wrong_login_method_main_frame.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.wrong_login_method_frame {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.wrong_login_method_main_text {
+    font-size: 18px;
+    color: #1A1A1B;
+    margin-top: 8px;
+}
+
+
+.wrong_login_method_sub_text {
+    font-size: 15px;
+    color: #616161;
+    text-align: center;
+    margin-top: 16px;
+    line-height: 26px;
+    margin-bottom: -16px;
+}

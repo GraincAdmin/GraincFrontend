@@ -1,0 +1,140 @@
+.company_announcement_header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    background: #0043A8;
+}
+
+.company_announcement_main_cover {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    flex-direction: column;
+    padding-top: 32px;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
+.company_announcement_search_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+    color: #1A1A1B;
+    white-space: nowrap;
+}
+
+.announcement_search_frame {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: 48px;
+    border: solid 1px #e1e1e1;
+    margin-left: 80px;
+}
+
+.announcement_search_input {
+    display: flex;
+    width: calc(100% - 48px);
+    height: 100%;
+    outline: none;
+    border: 0px;
+    padding: 0px 0px 0px 16px;
+    color: #1A1A1B;
+    font-size: 16px;
+    border-right: solid 1px #e1e1e1;
+}
+
+.announcement_search_button {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    background: #fff;
+}
+
+
+/* table */
+
+.company_announcement_table {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 24px;
+}
+
+.company_announcement_table thead {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #e1e1e1;
+}
+
+.company_announcement_table thead tr {
+    display: flex;
+    width: 100%;
+}
+
+.company_announcement_table thead th {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1A1A1B;
+}
+
+.company_announcement_table tbody {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.company_announcement_table tbody tr {
+    display: flex;
+    width: 100%;
+    padding: 12px 8px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #eee;
+    background: transparent;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.company_announcement_table tbody tr:hover {
+    background: rgba(0, 102, 255, 0.05);
+}
+
+.company_announcement_table tbody th {
+    display: flex;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1A1A1B;
+    text-decoration: none;
+}
+
+
+@media all and (max-width:1199px) {
+    .company_announcement_main_cover {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width:768px) {
+    .company_announcement_main_cover {
+        padding: 32px 16px 0px 16px;
+    }
+}
+

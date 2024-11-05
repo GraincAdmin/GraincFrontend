@@ -1,0 +1,201 @@
+.bookmark_base_cover {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.bookmark_base_main_header_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    color: #1A1A1B;
+}
+
+.bookmark_base_main_header_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+
+.community_bookmark_folder_wrap_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+    box-sizing: border-box;
+    padding-top: 32px;
+}
+
+@media all and (max-width:768px) {
+    .bookmark_base_main_header_frame {
+        display: none;
+    }
+}
+
+
+
+/* ---- responded_menu ---- */
+
+.bookmark_main_title_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmark_main_folder_view {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 24px 0px;
+    gap: 16px;
+    overflow-y: scroll;
+}
+
+.bookmark_main_title_text {
+    font-size: 18px;
+    color: #1A1A1B;
+}
+
+.responded_bookmark_folder_opener {
+    display: none;
+    width: auto;
+    height: 32px;
+    padding: 4px 6px 4px 16px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: solid 1px #0066FF;
+    font-size: 14px;
+    color: #0066FF;
+    align-items: center;
+    cursor: pointer;
+    line-height: auto;
+}
+
+@media all and (max-width:1199px) {
+    .responded_bookmark_folder_opener {
+        display: flex;
+    }
+    .bookmark_main_title_text {
+        font-size: 18px;
+    }
+}
+
+
+@media all and (max-width:1199px) {
+    .bookmark_base_cover {
+        max-width: 768px;
+        margin-top: 32px;
+    }
+    .bookmark_base_cover {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bookmark_folder_viewer {
+        display: flex;
+        position: fixed;
+        max-width: none;
+        height: 100%;
+        padding-right: 0px;
+        left: 0;
+        bottom: 0;
+        padding: 16px;
+        z-index: 5;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .bookmark_folder_viewer.open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+/* community folder style */
+
+.community_bookmark_folder_frame {
+    display: flex;
+    width: calc((100% - 25px) / 5);
+    height: auto;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.community_bookmark_folder_cover_image {
+    display: flex;
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+    background: #fafafa;
+    align-items: center;
+    justify-content: center;
+}
+
+.community_bookmark_folder_cover_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.community_bookmark_folder_information_frame {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 4px;
+}
+
+.community_bookmark_folder_title_frame {
+    font-size: 15px;
+    color: #1A1A1B;
+}
+
+.community_bookmark_folder_sub_title_frame {
+    font-size: 14px;
+    color: #616161;
+}
+
+@media all and (max-width:1199px) {
+    .community_bookmark_folder_frame {
+        width: calc((100% - 50px) / 3);
+    }
+}
+
+@media all and (max-width:768px) {
+    .community_bookmark_folder_wrap_frame {
+        padding: 71px 16px 0px 16px;
+    }
+    .community_bookmark_folder_cover_image {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+    }
+    .community_bookmark_folder_frame {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+    .community_bookmark_folder_information_frame {
+        margin-top: 0px;
+        margin-left: 16px;
+    }
+}

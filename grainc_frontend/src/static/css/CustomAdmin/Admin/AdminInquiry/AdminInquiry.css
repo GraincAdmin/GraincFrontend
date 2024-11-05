@@ -1,0 +1,46 @@
+.admin_inquiry_subject {
+    display: flex;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    color: #1A1A1B;
+}
+
+.admin_inquiry_content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    word-break: keep-all;
+    font-size: 14px;
+    color: #1A1A1B;
+}
+
+/* inquiry_status_change_button */
+
+.admin_inquiry_management_status_page_change_button_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.admin_inquiry_status_change_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #616161;
+    border: solid 1px #e1e1e1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.admin_inquiry_status_change_button.selected {
+    color: #fff;
+    background: #0066FF;
+    border: 0px;
+}

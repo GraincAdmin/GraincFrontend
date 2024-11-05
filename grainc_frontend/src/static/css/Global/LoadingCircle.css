@@ -1,0 +1,47 @@
+.loading_circle_fs {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading_container {
+  --uib-size: 26px;
+  --uib-color: #fff;
+  --uib-speed: .8s;
+  --uib-bg-opacity: 0.1;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  transform-origin: center;
+  animation: rotate var(--uib-speed) linear infinite;
+  will-change: transform;
+  overflow: visible;
+}
+
+.loading_container.color_option_blue {
+  --uib-color: #0066FF;
+}
+
+.car {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 25, 75;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  transition: stroke 0.5s ease;
+}
+
+.track {
+  fill: none;
+  stroke: var(--uib-color);
+  opacity: var(--uib-bg-opacity);
+  transition: stroke 0.5s ease;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

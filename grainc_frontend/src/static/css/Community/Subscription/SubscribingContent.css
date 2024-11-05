@@ -1,0 +1,51 @@
+
+.subscribing_content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex: 1;
+    margin: 0 auto;
+    margin-top: 48px;
+    justify-content: center;
+}
+
+.subscribing_content_section {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: column;
+}
+
+
+.subscribing_content_ad_section {
+    display: flex;
+    width: 340px;
+    height: 100%;
+    margin-left: 60px;
+    position: sticky;
+    top: 120px;
+}
+
+.subscribing_content_title {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    font-size: 32px;
+    color: #1A1A1B;
+}
+
+@media all and (max-width:1199px) {
+    .subscribing_content_ad_section {
+        display: none;
+    }
+    .subscribing_content_title {
+        display: none;
+    }
+    .subscribing_content_section {
+        max-width: 768px;
+    }
+    .subscribing_content {
+        margin-top: 16px;
+    }
+}

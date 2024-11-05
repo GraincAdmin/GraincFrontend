@@ -1,0 +1,136 @@
+
+/* --------- normal inquiry ---------- */
+
+.inquiry_submit_section_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.inquiry_submit_selection_title_text {
+    font-size: 18px;
+    color: #1A1A1B;
+}
+
+.inquiry_type_option_cover_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+}
+
+.inquiry_type_option {
+    display: flex;
+    width: calc((100% - 32px) / 3);
+    height: 48px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    color: #1A1A1B;
+    border: solid 1px #eee;
+    background: #fff;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.inquiry_type_option.error {
+    border: 1.5px solid #ff0000;
+}
+
+.inquiry_type_option.selected {
+    color: rgb(0, 102, 255);
+    border: 1px solid rgb(0, 102, 255);
+    background: rgba(0, 102, 255, 0.05);
+}
+
+.inquiry_type_option_icon {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+
+.inquiry_subject_input {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #1A1A1B;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.inquiry_subject_input.error {
+    border: solid 1.5px #ff0000;
+}
+
+.inquiry_subject_input:focus {
+    border: solid 1.5px #0066FF;
+}
+
+.inquiry_main_content {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #1A1A1B;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.inquiry_main_content.error {
+    border: solid 1.5px #ff0000;
+}
+
+.inquiry_main_content:focus {
+    border: solid 1.5px #0066FF;
+}
+
+.inquiry_submit_button_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: right;
+    margin-top: 40px;
+}
+
+.inquiry_submit_button {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 0px;
+    background: #0066FF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media all and (max-width:768px) {
+    .inquiry_content_block_frame {
+        padding: 0px 16px;
+        box-sizing: border-box;
+    }
+
+    .inquiry_type_option_cover_frame {
+        flex-direction: column;
+    }
+    .inquiry_type_option {
+        width: 100%;
+    }
+}

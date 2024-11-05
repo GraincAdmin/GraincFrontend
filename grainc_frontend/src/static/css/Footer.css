@@ -1,0 +1,126 @@
+/* ------ sellreports_footer_main_frame ------- */
+
+
+.sellreports_footer_main_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    justify-content: center;
+    border-top: solid 1px #E8EEF2;
+    margin-top: var(--min-margin-top, 48px);
+}
+
+.sellreports_footer_main_frame.marginOption {
+    margin-top: 0px !important;
+}
+
+.sellreports_footer_frame {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    flex-direction: column;
+}
+
+.sellreports_footer_logo_navigation_link_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.sellreports_footer_logo_text {
+    font-size: 18px;
+    color: #1A1A1B;
+}
+
+.sellreports_footer_navigation_link_frame {
+    display: flex;
+    width: auto;
+    max-width: 203px;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px 32px;
+}
+
+.sellreports_footer_navigation_link {
+    font-size: 16px;
+    color: #1A1A1B;
+    text-decoration: none;
+}
+
+.sellreports_footer_company_information {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sellreports_footer_company_basic_info_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 4px;
+    align-items: center;
+}
+
+.sellreports_footer_company_additional_info_frame {
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 4px;
+    align-items: center;
+}
+
+.footer_information_divider {
+    display: flex;
+}
+
+.sellreports_footer_company_information_text {
+    font-size: 12px;
+    color: #616161;
+}
+
+@media all and (max-width:1199px)  {
+    .sellreports_footer_frame {
+        max-width: 768px;
+    }
+
+    .footer_information_divider {
+        display: none;
+    }
+
+    .sellreports_footer_company_additional_info_frame {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media all and (max-width:767px){
+    .sellreports_footer_main_frame {
+        padding: 32px 24px 96px 24px;
+    }
+    .sellreports_footer_logo_navigation_link_frame {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .sellreports_footer_navigation_link_frame {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .sellreports_footer_navigation_link {
+        font-size: 14px;
+    }
+    .sellreports_footer_company_information {
+        margin-top: 32px;
+        bottom: 0px;
+    }
+}
+

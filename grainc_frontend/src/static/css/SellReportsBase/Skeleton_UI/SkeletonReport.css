@@ -1,0 +1,55 @@
+.skeleton_report_main_frame {
+    display: flex;
+    width: calc((100% - 24px) / 3);
+    height: auto;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.skeleton_report_content_100 {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    border-radius: 4px;
+}
+
+.skeleton_report_content_50 {
+    display: flex;
+    width: 50%;
+    height: 10px;
+    border-radius: 4px;
+}
+
+.skeleton_report_information_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.responded_report_information {
+    display: none;
+}
+
+@media all and (max-width:768px) {
+    .skeleton_report_information_frame {
+        display: none;
+    }
+    .responded_report_information {
+        display: flex;
+    }
+    .skeleton_report_main_frame {
+        padding: 26px 16px;
+        width: 100%;
+        border-radius: 0px;
+        border: 0px;
+        border-bottom: solid 1px #eee;
+    }
+}
+

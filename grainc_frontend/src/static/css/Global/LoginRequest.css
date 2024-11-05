@@ -1,0 +1,71 @@
+.login_request_main_frame {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.login_request_main_frame.open {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.login_request_frame {
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.login_request_text_sub_frame {
+    height: auto;
+    font-size: 15px;
+    color: #616161;
+}
+
+.login_request_decision_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.login_decision_button {
+    display: flex;
+    width: calc((100% - 8px) / 2);
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login_decision_button.cancel {
+    color: #616161;
+    background: #F1F4F7;
+}
+
+.login_decision_button.login {
+    color: #fff;
+    background: #0066FF;
+}

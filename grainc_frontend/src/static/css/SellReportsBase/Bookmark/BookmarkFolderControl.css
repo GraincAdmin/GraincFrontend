@@ -1,0 +1,46 @@
+
+/* ------- */
+
+.bookmark_action_button_popup {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+    padding: 0px 16px 48px 16px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.bookmark_action_button_popup.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.bookmark_action_button {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    height: 48px;
+    align-items: center;
+    gap: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #fff;
+    color: #1A1A1B;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+

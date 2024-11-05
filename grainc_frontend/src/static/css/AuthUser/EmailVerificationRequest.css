@@ -1,0 +1,105 @@
+.email_authentication_request_cover_frame {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 160px 0px;
+    box-sizing: border-box;
+    background: rgba(160, 168, 192, 0.1);
+}
+
+.sellreports_email_authentication_request_frame {
+    display: flex;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    padding: 24px;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px 0 rgba(149, 157, 165, 0.2);
+}
+
+.email_authentication_request_title {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 23px;
+    color: #1A1A1B;
+}
+
+.email_authentication_request_main_text {
+    font-size: 16px;
+    color: #616161;
+    word-break: keep-all;
+    line-height: 28px;
+}
+
+.email_authentication_input_frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 8px;
+    flex-direction: column;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+
+.email_authentication_subtext_black {
+    font-size: 15px;
+    color: #1A1A1B;
+}
+
+
+.email_authentication_input {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    padding: 0px 0px 0px 16px;
+    box-sizing: border-box;
+    margin: 0px;
+    outline: none;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+    transition: border 0.3s;
+}
+
+.email_authentication_input:focus {
+    border: solid 1px #0066FF;
+}
+
+.email_authentication_error_guideline_frame {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #fafafa;
+    padding: 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: 32px;
+}
+
+.email_authentication_guideline_text {
+    font-size: 15px;
+    color: #616161;
+    margin-top: 4px;
+}
+
+
+@media all and (max-width:767px){
+    .email_authentication_request_cover_frame {
+        padding: 0px !important;
+        padding-bottom: 40px !important;
+        background: #fff !important;
+    }
+    .sellreports_email_authentication_request_frame {
+        border-radius: 0px !important;
+        max-width: none !important;
+        box-shadow: none !important;
+        padding: 24px 16px 16px 16px !important;
+    }
+} 
