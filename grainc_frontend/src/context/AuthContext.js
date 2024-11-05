@@ -43,9 +43,11 @@ export const AuthProvider = ({ children }) => {
                 getUserProfileImage(jwtDecode(data.access).id);
             } else if (response.status === 401) {
                 setLoginError(true);
-            }
+            } else (
+                setLoginError(true)
+            )
         } catch(error) {
-            alert('로그인 중 문제가 발생했습니다');
+            setLoginError(true)
         } 
     };
 
