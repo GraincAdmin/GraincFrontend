@@ -76,7 +76,6 @@ function CommunityBookmark({style, style_control, article_id, setBookmarkStatus}
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting && currentPage.current < maxPage.current && !folderLoading) {
-                    console.log(1);
                     fetchUserBookmarkFolders(currentPage.current + 1);
                 }
             },

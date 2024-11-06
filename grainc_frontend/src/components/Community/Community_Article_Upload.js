@@ -444,16 +444,27 @@ function CommunityArticleUpload() {
     // Handle Article Save and load Saved Article
 
     const [savedArticles, setSavedArticles] = useState([]);
+    const [savedArticleLoading, setSavedArticleLoading] = useState(true);
+    const savedCurrentPage = useRef(1);
+    const savedMaxPage = useRef(1);
+    const savedObserverRef = useRef();
 
-    const fetchUserSavedArticleStatus = async () => {
+    const fetchUserSavedArticle = async (page) => {
+        setSavedArticleLoading(true);
         try {
-            const response = await apiClient.get('/get_user_saved_article/');
+            const response = await apiClient.get(`/get_user_saved_article/?page=${page}`);
             const data = response.data;
-            setSavedArticles(data.saved_articles);
+            if (response.status == 200) {
+                setSavedArticles((preState) => [...preState, ...data.saved_articles]);
+                savedCurrentPage.current = Number(data.current_page);
+                savedMaxPage.current = Number(data.max_page);
+            }
         } catch(error) {
             if (error.response.status !== 401) {
-                showSnackBar('임시저장 중 문제가 발생했습니다', 'error')
+                showSnackBar('임시저장을 불러오던 중 문제가 발생했습니다', 'error')
             }
+        } finally {
+            setSavedArticleLoading(false);
         }
     }
 
@@ -473,7 +484,6 @@ function CommunityArticleUpload() {
             'formatted_date': '방금 전',
             'id': article_id
         };
-        console.log(article_id);
         setSavedArticles((prevArticles) => [saved_article_data, ...prevArticles]);
     }
 
@@ -536,9 +546,36 @@ function CommunityArticleUpload() {
 
     useEffect(() => {
         if (savedArticleStyle) {
-            fetchUserSavedArticleStatus();
+            setSavedArticles([]);
+            fetchUserSavedArticle(1);
         }
     }, [savedArticleStyle]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && savedCurrentPage.current < savedMaxPage.current && !savedArticleLoading) {
+                    fetchUserSavedArticle(savedCurrentPage.current + 1)
+                }
+            },
+            { threshold: 1 }
+        );
+
+        if (savedObserverRef.current) {
+            if (!savedArticleLoading) {
+                observer.observe(savedObserverRef.current);
+            } else {
+                observer.unobserve(savedObserverRef.current);
+            }
+        }
+
+        return () => {
+            if (savedObserverRef.current) {
+                observer.unobserve(savedObserverRef.current);
+            }
+        };
+
+    }, [savedCurrentPage.current, savedMaxPage.current, savedArticleLoading]);
 
 
     // Custom Toolbar function
@@ -651,20 +688,27 @@ function CommunityArticleUpload() {
                     </div>
                     <div className="saved_articles_holder_frame">
                         {savedArticles.length !== 0 ? (
-                            savedArticles.map((article, index) => (
-                                <div key={index} className="saved_articles_frame saved_article_delete_{{ saved_articles.id }}">
-                                    <div className="saved_articles_information_frame" 
-                                        onClick={() => fetchUserSavedArticleLoad(article.id)}
-                                        style={{cursor:'pointer'}}
-                                    >
-                                        <div className="saved_articles_title_text Pre_KR_Normal">{ article.subject }</div>
-                                        <span className="saved_articles_saved_date_text Pre_KR_Normal">{ article.formatted_date }</span>
+                            <>
+                                {savedArticles.map((article, index) => (
+                                    <div key={index} className="saved_articles_frame saved_article_delete_{{ saved_articles.id }}">
+                                        <div className="saved_articles_information_frame" 
+                                            onClick={() => fetchUserSavedArticleLoad(article.id)}
+                                            style={{cursor:'pointer'}}
+                                        >
+                                            <div className="saved_articles_title_text Pre_KR_Normal">{ article.subject }</div>
+                                            <span className="saved_articles_saved_date_text Pre_KR_Normal">{ article.formatted_date }</span>
+                                        </div>
+                                        <div className="saved_articles_delete_button" onClick={() => handleSavedArticleDeleteConfirm(article.id)}>
+                                            <TrashIcon style={{stroke: '#e1e1e1'}}/>
+                                        </div>
                                     </div>
-                                    <div className="saved_articles_delete_button" onClick={() => handleSavedArticleDeleteConfirm(article.id)}>
-                                        <TrashIcon style={{stroke: '#e1e1e1'}}/>
+                                ))}
+                                {savedArticleLoading && (
+                                    <div style={{display: 'flex', margin: '24px auto 16px auto'}}>
+                                        <LoadingCircle color_option={true} />
                                     </div>
-                                </div>
-                            ))
+                                )}
+                            </>
                         ) : (
                             <div className="saved_articles_frame" style={{justifyContent:'center', borderBottom:'0px'}}>
                                 <a className="saved_articles_information_frame" style={{padding:'0px'}}>
@@ -672,6 +716,7 @@ function CommunityArticleUpload() {
                                 </a>
                             </div>
                         )}
+                        <div ref={savedObserverRef} style={{height: '10px'}} />
                     </div>
                     <div 
                         className="current_article_save_button Pre_KR_Medium" 
