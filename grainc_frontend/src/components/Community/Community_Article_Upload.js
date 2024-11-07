@@ -327,6 +327,7 @@ function CommunityArticleUpload() {
                 main_content: mainContent,
                 upload_type: uploadType,
                 content_type: contentType,
+                ...(uploadType === 'save' && { saved_article_id: savedArticleId.current }),
                 ...(uploadType === 'modification' && { article_id: articleId }) // Conditionally include article_id
             };
     
@@ -449,6 +450,9 @@ function CommunityArticleUpload() {
     const savedMaxPage = useRef(1);
     const savedObserverRef = useRef();
 
+    // for saved article duplication prevention
+    const savedArticleId = useRef();
+
     const fetchUserSavedArticle = async (page) => {
         setSavedArticleLoading(true);
         try {
@@ -484,11 +488,17 @@ function CommunityArticleUpload() {
             'formatted_date': '방금 전',
             'id': article_id
         };
+        if (savedArticleId.current) {
+            const updatedSavedArticles = savedArticles.filter(article => article.id !== savedArticleId.current);
+            setSavedArticles(updatedSavedArticles);
+        } 
         setSavedArticles((prevArticles) => [saved_article_data, ...prevArticles]);
+        savedArticleId.current = article_id;
     }
 
     const fetchUserSavedArticleLoad = async (article_id) => {
         if (article_id) {
+            savedArticleId.current = article_id;
             try {
                 const response = await apiClient.get(`/load_user_saved_article/${article_id}`)
                 const data = response.data
